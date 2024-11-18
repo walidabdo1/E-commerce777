@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/ProductDetails.css">
+</head>
+
+<body>
+    <!-- Header Static Nav -->
+    <header class="container-fluid">
+        <div class="container d-flex align-items-center justify-content-between header-nav">
+            <a class="navbar-brand" href="#">E-commerce</a>
+            <div class="logo-search d-flex justify-content-between align-items-center">
+                <form
+                class="d-none w-100 d-md-flex form-search border-2 border rounded-2"
+                role="search"
+                >
+                <input
+                    class="form-control w-75"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                />
+                <select class="w-50 form-control cat-select">
+                    <option value="All Categories">All Categories</option>
+                    <option value="Computers">Computers</option>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Camerars">Camerars</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Smartphones">Smartphones</option>
+                </select>
+                <button class="btn btn-search" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                </form>
+            </div>
+            <div class="do-fav d-flex align-items-center justify-content-end gap-4">
+                <div
+                class="wishlist d-flex gap-2 align-items-center justify-content-center"
+                >
+                <a href="./wish.html">
+                    <div class="wish-img position-relative">
+                    <img src="./imgs/download.webp" alt="" />
+                    <div class="num-wish"></div>
+                    </div>
+                </a>
+                <div class="wish-head-txt">
+                    <h6>Wishlist</h6>
+                </div>
+                </div>
+                <div
+                class="Cart d-flex gap-2 align-items-center justify-content-center"
+                >
+                <a href="./cart.html">
+                    <div class="img-cart position-relative">
+                    <img src="./imgs/download (4).webp" alt="" />
+                    <div class="num-cart"></div>
+                    </div>
+                </a>
+                <div class="wish-head-txt">
+                    <h6>Cart</h6>
+                    <small class="total-price"></small>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Staticy Nav -->
+    <nav class="navbar nav-sticky position-sticky top-0 w-100 navbar-expand-lg z-3" id="spy">
+        <div class="container align-items-start">
+            <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle cat-pick"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                    Categories</a
+                >
+                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Computers & Laptops</a></li>
+                                <li><a class="dropdown-item" href="#">Cameras & Photos</a></li>
+                                <li><a class="dropdown-item" href="#">Hardware</a></li>
+                                <li><a class="dropdown-item" href="#">Smartphones & Tablets</a></li>
+                                <li><a class="dropdown-item" href="#">TV & Audio</a></li>
+                                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+                                <li><a class="dropdown-item" href="#">Car Electronics</a></li>
+                                <li><a class="dropdown-item" href="#">Video Games & Consoles</a></li>
+                </ul>
+            </li>
+                <button
+                class="navbar-toggler lh-base text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                Menu &nbsp;
+                <i class="fa-solid fa-xl fa-bars text-white"></i>
+                </button>
+                <div
+                    class="collapse navbar-collapse m-auto"
+                    id="navbarSupportedContent"
+                >
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a
+                        class="nav-link text-white active"
+                        aria-current="page"
+                        href="index.html"
+                        >Home</a
+                    >
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="#super"
+                        >Super Deals</a
+                    >
+                    </li>
+                    <li class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        aria-current="page"
+                        href="#newArrival"
+                        >New Arrival</a
+                    >
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="#trends"
+                        >Trends</a
+                    >
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a
+                        class="nav-link text-white dropdown-toggle"
+                        aria-current="page"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="#"
+                        >Pages</a
+                    >
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                        <li><a class="dropdown-item" href="wish.html">WishList</a></li>
+                        <li><a class="dropdown-item" href="shop.html">shop</a></li>
+                        
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="#contact"
+                        >Contact</a
+                    >
+                    </li>
+                    <button id="signupBtn" class="btn btn-light mx-2">
+                        <a href="Signup.html">SignUp</a>
+                    </button>
+                    <button id="signinBtn" class="btn btn-light mx-2">
+                        <a href="Signin.html">Login</a>
+                    </button>
+                    <button id="signoutBtn" class="btn btn-light mx-2">Logout</button>            
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--  End Header Staticy Nav -->
+
+    <!-- Start section "product-details" -->
+    <section class="product-details">
+        <div class="container">
+        <div class="row g-4">
+            <div class="col-6 col-lg-2">
+            <div id="image-thumbnails" class="thumbnail-container"></div>
+            </div>
+            <div class="col-6 col-lg-5">
+            <img 
+                id="selected-image" 
+                src="" 
+                alt="Selected Product" 
+                class="large-image " 
+            />
+            </div>
+            <div class="col-6 col-lg-5">
+                <div class="details mt-5">
+                    <h5 id="product-brand" class="product-brand"></h5>
+                    <h3 id="product-title" class="product-title"></h3>
+                    <div id="product-rating" class="rating"></div>
+                    <p id="product-description" class="product-description"></p>
+                    <p><strong>Quantity:</strong> 
+                        <span id="product-quantity" class="product-quantity "></span>
+                    </p>
+                    <div class="colorBtns mt-3 mb-3">
+                        <p> <strong>Color:</strong></p>
+                        <span class="purple"></span>
+                        <span class="black"></span>
+                        <span class="gold"></span>
+                    </div>
+                    <p><strong>Price:</strong> <span id="product-price" class="product-price"></span></p>
+                    <!-- <button class="btn btn-primary mt-3">Add To Cart</button> -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End section "product-details" -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/ProductDetails.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/Signin.js"></script>
+    <script src="./js/Signup.js"></script>
+
+</body>
+</html>

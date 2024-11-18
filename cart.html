@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <title>E-Commerce</title>
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#spy" data-bs-offset="" data-bs-smooth-scroll="true">
+  <!-- Header Staticy Nav -->
+  <nav class="navbar nav-sticky position-sticky top-0 w-100 navbar-expand-lg z-3" id="spy">
+    <div class="container align-items-start">
+      <li class="nav-item">
+        <a class="navbar-brand text-white" href="index.html">E-Commerce</a>
+      </li>
+      <button class="navbar-toggler lh-base text-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu &nbsp;
+        <i class="fa-solid fa-xl fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse m-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="index.html#super">Super Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="index.html#newArrival">New Arrival</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="index.html#trends">Trends</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle active" aria-current="page" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" href="#">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="cart.html">Cart</a></li>
+              <li><a class="dropdown-item" href="wish.html">WishList</a></li>
+              <li>
+                <a class="dropdown-item" href="shop.html">Shop</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- cart Section -->
+  <main>
+    <section id="cart" class="py-5">
+      <div class="container">
+        <h3 class="border-1 border-bottom pb-3 mb-5">Cart List</h3>
+        <div class="row justify-content-between pb-4 border-1 border-bottom">
+          <div class="col-4 fs-5 fw-bold text-secondary">Item Details</div>
+          <div class="col-2 fs-5 fw-bold text-secondary">Price</div>
+          <div class="col-3 fs-5 fw-bold text-secondary">Count</div>
+          <div class="col-2 fs-5 fw-bold text-secondary">Total Price</div>
+        </div>
+        <ul class="p-0 cartlist"></ul>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-success payBtn" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Pay Now
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="noCart d-none">
+    <img src="./imgs/empty-cart.svg" alt="" />
+  </div>
+  <!-- Start Footer -->
+  <footer class="pt-5 pb-5" id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="ite">
+            <div class="logo mb-4">
+              <a href="#">E-Commerce</a>
+            </div>
+            <div class="footer_title mb-2">Got Question? Call Us 24/7</div>
+            <div class="footer_phone mb-2">+38 068 005 3570</div>
+            <div class="footer_email mb-2">MohamedBehairy@gmail.com</div>
+            <div class="footer_contact_text mb-3">17 Princess Road, London Grester London NW18JR, UK</div>
+            <div class="footer_social d-flex">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 offset-md-1">
+          <div class="ite">
+            <h3 class="h6 mb-3 fw-bold">Find it Fast</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="" class="small text-secondary">Men's Fashion</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Women's Fashion</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Smartphones & Tablets</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">TV & Audio</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Cameras & Photos</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Hardware</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ite">
+            <h3 class="h6 mb-3 fw-bold">Customer Care</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Customer Services</a></li>
+              <li><a href="#">Returns / Exchange</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Product Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <!-- Start Copyright  -->
+  <div class="copyright py-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-8">
+          <p class="mb-0">Copyright ©2021 All rights reserved</p>
+        </div>
+        <div class="col-md-4">
+          <div class="pay">
+            <ul class="list-unstyled d-flex justify-content-md-end mb-0 footimg">
+              <li><a href="#" class="me-3"><img src="img/footer/footer1.webp" alt=""></a></li>
+              <li><a href="#" class="me-3"><img src="img/footer/footer2.webp" alt=""></a></li>
+              <li><a href="#" class="me-3"><img src="img/footer/footer3.webp" alt=""></a></li>
+              <li><a href="#"><img src="img/footer/footer4.webp" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Copyright  -->
+  <!-- Aside -->
+  <!-- upperArrow -->
+  <aside class="arrowUp">
+    <a href="#" class="d-block w-100 h-100 d-flex align-items-center justify-content-center"><i
+        class="fa-solid fa-chevron-up fa-xl"></i></a>
+  </aside>
+  <aside class="loading opacity-1">
+    <i class="fa-solid fa-5x fa-spinner fa-spin-pulse text-white"></i>
+  </aside>
+  <!-- Confirm Pay -->
+  <aside>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title total-price fs-5" id="staticBackdropLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Are you sure u want to Pay ?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Not Now
+            </button>
+            <button type="button" class="btn btn-primary acceptPay" data-bs-dismiss="modal">
+              Yes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <script src="./js/bootstrap.bundle.min.js" defer></script>
+  <script src="./js/cart.js" defer></script>
+</body>
+
+</html>

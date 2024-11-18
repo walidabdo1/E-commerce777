@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <title>E-Commerce</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#spy" data-bs-offset="" data-bs-smooth-scroll="true">
+  <!-- Header Static Nav -->
+  <header class="container-fluid">
+    <div class="container d-flex align-items-center justify-content-between header-nav">
+      <a class="navbar-brand" href="index.html">E-commerce</a>
+      <div class="logo-search d-flex justify-content-between align-items-center">
+        <form class="d-none w-100 d-md-flex form-search border-2 border rounded-2" role="search">
+          <input class="form-control w-75" type="search" placeholder="Search" aria-label="Search" />
+          <select class="w-50 form-select ">
+            <option value="1">All Categories</option>
+            <option value="2">Men's Fashion</option>
+            <option value="3">Women's Fashion</option>
+            <option value="4">Electronics</option>
+          </select>
+
+          <button class="btn btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="do-fav d-flex align-items-center justify-content-end gap-4">
+        <div class="wishlist d-flex gap-2 align-items-center justify-content-center">
+          <a href="./wish.html">
+            <div class="wish-img position-relative">
+              <img src="./imgs/download.webp" alt="" />
+              <div class="num-wish"></div>
+            </div>
+          </a>
+          <div class="wish-head-txt">
+            <h6>Wishlist</h6>
+          </div>
+        </div>
+        <div class="Cart d-flex gap-2 align-items-center justify-content-center">
+          <a href="./cart.html">
+            <div class="img-cart position-relative">
+              <img src="./imgs/download (4).webp" alt="" />
+              <div class="num-cart"></div>
+            </div>
+          </a>
+          <div class="wish-head-txt">
+            <h6>Cart</h6>
+            <small class="total-price"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header Staticy Nav -->
+  <nav class="navbar nav-sticky position-sticky top-0 w-100 navbar-expand-lg z-3" id="spy">
+    <div class="container align-items-start">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle cat-pick" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+          Categories</a>
+
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="shop.html">Men's Fashion</a></li>
+          <li><a class="dropdown-item" href="shop.html">Women's Fashion</a></li>
+          <li><a class="dropdown-item" href="shop.html">Computers & Laptops</a></li>
+          <li><a class="dropdown-item" href="shop.html">Smartphones & Tablets</a></li>
+          <li><a class="dropdown-item" href="shop.html">TV & Audio</a></li>
+          <li><a class="dropdown-item" href="shop.html">Cameras & Photos</a></li>
+          <li><a class="dropdown-item" href="shop.html">Hardware</a></li>
+        </ul>
+      </li>
+      <button class="navbar-toggler lh-base text-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu &nbsp;
+        <i class="fa-solid fa-xl fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse m-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#super">Super Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#newArrival">New Arrival</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#trends">Trends</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" aria-current="page" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" href="#">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+              <li><a class="dropdown-item" href="wish.html">WishList</a></li>
+              <li><a class="dropdown-item" href="shop.html">shop</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#contact">Contact</a>
+          </li>
+          <button id="signupBtn" class="btn btn-light mx-2">
+            <a href="Signup.html">SignUp</a>
+          </button>
+          <button id="signinBtn" class="btn btn-light mx-2">
+            <a href="Signin.html">Login</a>
+          </button>
+          <button id="signoutBtn" class="btn btn-light mx-2">Logout</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="home" class="hero">
+      <div
+        class="container text-capitalize slider-content d-flex align-items-center justify-content-center flex-column flex-md-row p-4">
+        <div class="hero-text">
+          <h1>NEW ERA OF SMARTPHONES</h1>
+          <span class="text-decoration-line-through">$530</span>
+          <span class="text-danger"> $460</span>
+          <h6>Apple Iphone 6s</h6>
+          <button class="btn-cta">Shop Now</button>
+        </div>
+        <div class="img-container-hero">
+          <img src="./imgs/xbanner_product.png.pagespeed.ic.8YoeI51pih.webp" alt="iphone and headphone" />
+        </div>
+      </div>
+    </section>
+
+    <!-- features Section -->
+    <section id="features" class="features my-5">
+      <div class="container d-flex flex-lg-row flex-column gap-4 justify-content-between">
+        <div class="feature d-flex align-items-center gap-3">
+          <img src="./imgs/download (1).webp" alt="" />
+          <p>
+            <strong class="fw-medium">Free Delivery</strong><br /><small class="text-secondary">from $50</small>
+          </p>
+        </div>
+        <div class="feature d-flex align-items-center gap-3">
+          <img src="./imgs/download (1) (1).webp" alt="" />
+          <p>
+            <strong class="fw-medium">Free Delivery</strong><br /><small class="text-secondary">from $50</small>
+          </p>
+        </div>
+        <div class="feature d-flex align-items-center gap-3">
+          <img src="./imgs/download (2).webp" alt="" />
+          <p>
+            <strong class="fw-medium">Free Delivery</strong><br /><small class="text-secondary">from $50</small>
+          </p>
+        </div>
+        <div class="feature d-flex align-items-center gap-3">
+          <img src="./imgs/download (3).webp" alt="" />
+          <p>
+            <strong class="fw-medium">Free Delivery</strong><br /><small class="text-secondary">from $50</small>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- super Section -->
+    <section id="super">
+      <div class="container">
+        <div class="row g-5 m-0">
+          <div class="cursel-super col-12 col-lg-4 p-4">
+            <div class="heading-cursel d-flex justify-content-between">
+              <h4>Deals of the Week</h4>
+            </div>
+            <div class="cursal">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2500">
+                    <img src="./imgs/xdeals.png.pagespeed.ic.nmhfwwkKMA.webp" class="" alt="..." />
+                    <div class="carousel-text d-flex flex-column gap-4 pt-4">
+                      <div class="d-flex justify-content-between">
+                        <div class="h-text-carousel d-flex flex-column">
+                          <span class="small text-secondary">HeadPhone</span>
+                          <h4>Beoplay H7</h4>
+                        </div>
+                        <div class="price-carousel d-flex flex-column">
+                          <span class="small text-secondary">$300</span>
+                          <h4 class="text-danger">$225</h4>
+                        </div>
+                      </div>
+                      <div class="curs-pro">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <span class="text-secondary">Avalibale: <b>6</b></span>
+                          <span class="text-secondary">Already Sold: <b>28</b>
+                          </span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                          aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar" style="width: 31%; border-radius: 20px"></div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="h-text-carousel d-flex flex-column">
+                          <h6>Harry Up</h6>
+                          <span class="small text-secondary">offer ends in:</span>
+                        </div>
+                        <div class="price-carousel d-flex flex-column time-end"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./imgs/xdeals.png.pagespeed.ic.nmhfwwkKMA.webp" class="" alt="..." />
+                    <div class="carousel-text d-flex flex-column gap-4 pt-4">
+                      <div class="d-flex justify-content-between">
+                        <div class="h-text-carousel d-flex flex-column">
+                          <span class="small text-secondary">HeadPhone</span>
+                          <h4>Beoplay H7</h4>
+                        </div>
+                        <div class="price-carousel d-flex flex-column">
+                          <span class="small text-secondary">$300</span>
+                          <h4 class="text-danger">$225</h4>
+                        </div>
+                      </div>
+                      <div class="curs-pro">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <span class="text-secondary">Avalibale: <b>6</b></span>
+                          <span class="text-secondary">Already Sold: <b>28</b>
+                          </span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                          aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar" style="width: 31%; border-radius: 20px"></div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="h-text-carousel d-flex flex-column">
+                          <h6>Harry Up</h6>
+                          <span class="small text-secondary">offer ends in:</span>
+                        </div>
+                        <div class="price-carousel d-flex flex-column time-end"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="prev">
+                  <i class="fa fa-chevron-left text-black"></i>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                  data-bs-slide="next">
+                  <i class="fa fa-chevron-right text-black"></i>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items-container col-12 col-lg-8">
+            <div class="tabs-items">
+
+              <div id="twn-pro" class="items-list  row g-3 py-4 px-2 d-flex justify-content-start">
+                <div class="item sale col-6 col-md-4 col-lg-3 p-0">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories Section -->
+    <section id="popCategories" class="popCategories my-5 px-4 px-md-0">
+      <div class="container d-flex flex-lg-row flex-column gap-5 justify-content-between">
+        <div class="text-cat">
+          <h4>Popular Categories</h4>
+          <button class="btn-cta">Full Categories</button>
+        </div>
+        <div class="catgs d-flex align-items-center justify-content-center gap-3 flex-wrap flex-md-nowrap">
+          <div class="cat d-flex flex-column text-center justify-content-center align-items-center">
+            <img src="./imgs/xpopular_1.png.pagespeed.ic.iakLDOhA7r.webp" alt="" />
+            <p class="text-secondary">Smartphones & Tablets</p>
+          </div>
+          <div class="cat d-flex flex-column text-center justify-content-center align-items-center">
+            <img src="./imgs/xpopular_1.png.pagespeed.ic.iakLDOhA7r.webp" alt="" />
+            <p class="text-secondary">Smartphones & Tablets</p>
+          </div>
+          <div class="cat d-flex flex-column text-center justify-content-center align-items-center">
+            <img src="./imgs/xpopular_1.png.pagespeed.ic.iakLDOhA7r.webp" alt="" />
+            <p class="text-secondary">Smartphones & Tablets</p>
+          </div>
+          <div class="cat d-flex flex-column text-center justify-content-center align-items-center">
+            <img src="./imgs/xpopular_1.png.pagespeed.ic.iakLDOhA7r.webp" alt="" />
+            <p class="text-secondary">Smartphones & Tablets</p>
+          </div>
+          <div class="cat d-flex flex-column text-center justify-content-center align-items-center">
+            <img src="./imgs/xpopular_1.png.pagespeed.ic.iakLDOhA7r.webp" alt="" />
+            <p class="text-secondary">Smartphones & Tablets</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ads Section -->
+    <section id="ads" class="ads-sec">
+      <div class="container">
+        <div id="carouselExampleDark" class="carousel ads-carousel carousel-dark slide py-5 px-4 px-md-0"
+          data-bs-ride="ads-carousel ">
+          <div class="carousel-indicators gap-2">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <div class="d-flex flex-column flex-md-row gap-5 align-items-start py-lg-4 py-2">
+                <div class="text-ad">
+                  <span class="small text-secondary">Laptops</span>
+                  <h4>MacBook Air 13</h4>
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Maxime, quidem. Praesentium a distinctio provident natus.
+                  </p>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <button class="btn-cta mt-4 d-block">Explore</button>
+                </div>
+                <div class="img-ad">
+                  <img src="./imgs/xbanner_2_product.png.pagespeed.ic.26wMfooIqr.webp" class="d-block w-100"
+                    alt="laptop" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <div class="d-flex flex-column flex-md-row gap-5 align-items-start py-lg-4 py-2">
+                <div class="text-ad">
+                  <span class="small text-secondary">Laptops</span>
+                  <h4>MacBook Air 13</h4>
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Maxime, quidem. Praesentium a distinctio provident natus.
+                  </p>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <button class="btn-cta mt-4 d-block">Explore</button>
+                </div>
+                <div class="img-ad">
+                  <img src="./imgs/xbanner_2_product.png.pagespeed.ic.26wMfooIqr.webp" class="d-block w-100"
+                    alt="laptop" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <div class="d-flex flex-column flex-md-row gap-5 align-items-start py-lg-4 py-2">
+                <div class="text-ad">
+                  <span class="small text-secondary">Laptops</span>
+                  <h4>MacBook Air 13</h4>
+                  <p class="mb-3">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Maxime, quidem. Praesentium a distinctio provident natus.
+                  </p>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <span><i class="fa-solid fa-star text-warning"></i></span>
+                  <button class="btn-cta mt-4 d-block">Explore</button>
+                </div>
+                <div class="img-ad">
+                  <img src="./imgs/xbanner_2_product.png.pagespeed.ic.26wMfooIqr.webp" class="d-block w-100"
+                    alt="laptop" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrival Section -->
+    <section class="New-Arriva pt-5 pb-5" id="newArrival">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col new">
+            <div class="d-flex ">
+              <h2 class="text-dark">Hot New Arrival</h2>
+            </div>
+          </div>
+        </div>
+        <hr class="m-0">
+        <div class="row g-4">
+          <div class="col-lg-12">
+            <div class="items mt-3">
+              <div class="row g-0 " class="items-list" id="apiProducts">
+                <span class="loader"></span>
+                <div class="owl-carousel owl-theme">
+                  <div id="item1" class="item">
+                    <h4>1</h4>
+                  </div>
+                  <div id="item2" class="item">
+                    <h4>2</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Trends Section -->
+    <section id="trends" class="py-5 trends">
+      <div class="container">
+        <h4 class="border-bottom pb-3 border-3 mb-5">Trends in 2021</h4>
+        <div class="trends-conrainer">
+          <button class="next-trend-btn">></button>
+          <button class="perv-trend-btn"><span><</span></button>
+          <div class="trend-flex">
+            <div class="trend p-4 rounded-3 bg-white position-relative" id="trend"
+              style="justify-content: center; align-items: center; display: flex;">
+              <div class="new"></div>
+              <button class="fav"><i class="fa-solid fa-heart"></i></button>
+              <img src="" alt="" class="w-75 m-auto d-block mb-3" />
+              <span class="small text-secondary">smartPhone</span>
+              <div class="d-flex justify-content-between gap-3">
+                <h6 class="fw-normal">Lorem ipsum</h6>
+                <h6 class="fw-normal">$984</h6>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="brands py-5">
+      <div class="container">
+        <div class="brands-container">
+          <ul class="brands-flex">
+            <li>
+              <img src="./imgs/addidas.png" alt="" class="w-50" />
+            </li>
+            <li>
+              <img src="./imgs/puma.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/canon.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/defacto.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/lc-waikiki.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/dell.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/sony.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/samsung.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/lenovo.png" alt="" class="w-50" />
+
+            </li>
+            <li>
+              <img src="./imgs/Toshiba.png" alt="" class="w-50" />
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Start Section13 "Subscribe" -->
+  <section class="subscribe pt-5 pb-5" id="subscribe">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-lg-4">
+          <div class="ite d-flex justify-content-center">
+            <div class="img-sub me-4">
+              <img src="img/telegram.webp" alt="">
+            </div>
+            <div class="text-sub">
+              <h3 class="h5 fw-bold">Sign up for Newsletter</h3>
+              <p class="mb-0">...and receive %20 coupon for first shopping.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <form id="subscrib_form" class="d-flex">
+            <input id="userSubEmail" class="form-control" type="email" name="userSubEmail"
+              placeholder="Enter Your Email Adress">
+            <a button id="btnSubEmail" class="btn text-white btn-info " type="submit" disabled="">Subscribe</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Section13 "Subscribe" -->
+  <!-- Start Footer -->
+  <footer class="pt-5 pb-5" id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="ite">
+            <div class="logo mb-4">
+              <a href="#">E-Commerce</a>
+            </div>
+            <div class="footer_title mb-2">Got Question? Call Us 24/7</div>
+            <div class="footer_phone mb-2">+38 068 005 3570</div>
+            <div class="footer_email mb-2">Mohamed@gmail.com</div>
+            <div class="footer_contact_text mb-3">17 Princess Road, London Grester London NW18JR, UK</div>
+            <div class="footer_social d-flex">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 offset-md-1">
+          <div class="ite">
+            <h3 class="h6 mb-3 fw-bold">Find it Fast</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="" class="small text-secondary">Men's Fashion</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Women's Fashion</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Smartphones & Tablets</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">TV & Audio</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Cameras & Photos</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Hardware</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ite">
+            <h3 class="h6 mb-3 fw-bold">Customer Care</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Customer Services</a></li>
+              <li><a href="#">Returns / Exchange</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Product Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <!-- Start Copyright  -->
+  <div class="copyright py-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-8">
+          <p class="mb-0">Copyright ©2021 All rights reserved</p>
+        </div>
+        <div class="col-md-4">
+          <div class="pay">
+            <ul class="list-unstyled d-flex justify-content-md-end mb-0 footimg">
+              <li><a href="#" class="me-3"><img src="img/footer/footer1.webp" alt=""></a></li>
+              <li><a href="#" class="me-3"><img src="img/footer/footer2.webp" alt=""></a></li>
+              <li><a href="#" class="me-3"><img src="img/footer/footer3.webp" alt=""></a></li>
+              <li><a href="#"><img src="img/footer/footer4.webp" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Copyright  -->
+
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="path/to/your/cart-script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wish.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
